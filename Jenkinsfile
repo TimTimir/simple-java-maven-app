@@ -10,6 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'mvn -B -DskipTests clean package'
+        sh 'ls -la /root/.m2/repository/com'
       }
     }
   }
